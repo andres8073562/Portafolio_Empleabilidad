@@ -1,80 +1,79 @@
-body {
-  margin: 0;
-  height: 100vh;
-  background: linear-gradient(
-    135deg,
-    #0a0a0a,
-    #020120,
-    #29035b,
-    #010233
-  );
-}
-.barra {
-  position: fixed;
-  top: 3vh;
-  left: 20vw;
-  width: 60vw;
-  height: 6vh;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* pegados a la izquierda */
-  padding: 1vw;
-  margin: 0vw;
-  font-size: 1.4vw;
-  font-family: 'Courier New', Courier, monospace;
-
-  gap: 5.5vw; /* sin espacio entre elementos */
-}
-.barra p:hover {
-  font-size: 1.2vw;
-  color: #00ffcc;
-  text-shadow: 0 0 5px #00ffcc;
-}
-.lema{
-    position: fixed;
-    top: 3vh;
-    left: 2vw;
-    width: 55vw;
-    height: 3vh;
-    color: white;
-    top: 18vh;
-    left: 24vw;
-    font-size: 6vw;
-    text-align: center;
-}
-.presentacion {
-  position: fixed;
-  top: 59vh;
-  left: 22vw;
-  width: 60vw;
-  height: 50vh;
-  color: white;
-  font-size: 2vw;
-  text-align: center;
-
-}
-.iconos {
-  position: fixed;
-  top: 83vh;
-  left: 43vw;
-  width: 15vw;
-  height: 6vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Pegados al inicio */
-  gap: 3vw; /* Separación mínima entre iconos */
-
-  padding: 0.5vw;
-  margin: 0;
-}
-
-.iconos img {
-  width: 3vw;
-  height: 3vw;
-  transition: transform 0.3s ease;
-}
-.iconos img:hover {
-  transform: scale(1.2);
-  filter: brightness(1.2);
-}
+  html, body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: white;
+      overflow-x: hidden;
+    }
+    header, nav, section {
+      padding: 4vh 4vw;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 4vw;
+      font-size: 1.5vw;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0.3vh;
+      background: white;
+      left: 0;
+      bottom: -1vh;
+      transition: width 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .titulo-principal {
+      font-size: 4vw;
+      margin-top: 3vh;
+    }
+    .subtitulo {
+      font-size: 1.5vw;
+      margin: 3vh auto;
+      max-width: 70vw;
+    }
+    section h2 {
+      font-size: 3vw;
+      margin-top: 4vh;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.2vw;
+    }
+    .seccion {
+      max-width: 90vw;
+      margin: auto;
+      text-align: left;
+      font-size: 1.2vw;
+    }
+    .seccion p,
+    .seccion li,
+    .seccion h3 {
+      font-size: 1.2vw;
+      line-height: 1.6;
+    }
+    .redes img {
+      width: 3vw;
+      margin: 0 1vw;
+    }
+    a {
+      font-size: 1.2vw;
+    }
