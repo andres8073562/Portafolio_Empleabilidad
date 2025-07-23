@@ -77,3 +77,65 @@
     a {
       font-size: 1.2vw;
     }
+    
+    .container {
+      font-size: 0.2vw;
+      display: flex;
+      flex-direction: column;
+      text-align: right; 
+      width: 57vw;
+      padding: 1vw;  
+      gap: 0vw;
+      margin-left: 38vw;
+      text-align: left;
+    }
+    .foto{
+      position: absolute;
+      left: 15vw;
+      top: 20vh;
+      width: 18vw;
+      height: 18vw;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .container_principal {
+      display: flex;
+      justify-content: center;
+      gap: 2vw;
+      padding: 2vw;
+      
+    }
+    
+    .columna {
+      display: flex;
+      flex-direction: column;
+      gap: 2vw;
+    }
+    
+    /* Estilo general para cada caja */
+    .container2,
+    .container3,
+    .container4,
+    .container5,
+    .container6,
+    .container7 {
+      width: 30vw;
+      background-color: #302b63;
+      border: 0.2vw solid #ffffff;
+      border-radius: 1vw;
+      padding: 2vw;
+      font-size: 0.9vw;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    
+    /* Efecto hover */
+    .container2:hover,
+    .container3:hover,
+    .container4:hover,
+    .container5:hover,
+    .container6:hover,
+    .container7:hover {
+      transform: scale(1.03);
+      background-color: #3d347c;
+    }
+    
