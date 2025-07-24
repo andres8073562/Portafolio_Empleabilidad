@@ -111,8 +111,7 @@
       flex-direction: column;
       gap: 2vw;
     }
-    
-    /* Estilo general para cada caja */
+
     .container2,
     .container3,
     .container4,
@@ -128,8 +127,8 @@
       transition: transform 0.3s ease, background-color 0.3s ease;
     }
     
-    /* Efecto hover */
-    .container2:hover,
+
+    #container2:hover,
     .container3:hover,
     .container4:hover,
     .container5:hover,
@@ -139,3 +138,90 @@
       background-color: #3d347c;
     }
     
+    .cuadro1 {
+      position: absolute;
+      width: 12.6vw;
+      height: 51vh; 
+      background: linear-gradient(to right, #181341, #403a81, #555593);
+      border: 0.2vw solid rgb(255, 255, 255);
+      color: white;
+      font-size: 0.9vw;
+      border-radius: 1vw;
+      flex-direction: column;
+      padding: 2vw;
+      left: 2vw;
+      top: 38vh;
+      display: none;
+      text-align: left;
+      gap:0vw;
+    }
+
+    .cuadro2{
+      position: absolute;
+      width: 12.8vw;
+      height: 51vh; 
+      background: linear-gradient(to right, #181341, #403a81, #555593);
+      border: 0.2vw solid rgb(255, 255, 255);
+      color: white;
+      font-size: 0.9vw;
+      border-radius: 1vw;
+      flex-direction: column;
+      padding: 2vw;
+      left: 21vw;
+      top: 38vh;
+      display: none;
+      text-align: left;
+      gap:0vw;
+    }
+    .cuadro3{
+      position: absolute;
+      width: 12.8vw;
+      height: 51vh; 
+      background: linear-gradient(to right, #181341, #403a81, #555593);
+      border: 0.2vw solid rgb(255, 255, 255);
+      color: white;
+      font-size: 0.9vw;
+      border-radius: 1vw;
+      flex-direction: column;
+      padding: 2vw;
+      left: 42vw;
+      top: 38vh;
+      display: none;
+      text-align: left;
+      gap:0vw;
+    }
+    .cuadro4{
+      position: absolute;
+      width: 12.8vw;
+      height: 51vh; 
+      background: linear-gradient(to right, #181341, #403a81, #555593);
+      border: 0.2vw solid rgb(255, 255, 255);
+      color: white;
+      font-size: 0.9vw;
+      border-radius: 1vw;
+      flex-direction: column;
+      padding: 2vw;
+      left: 61.5vw;
+      top: 38vh;
+      display: none;
+      text-align: left;
+      gap:0vw;
+    }
+
+    .cuadro5{
+      position: absolute;
+      width: 12.8vw;
+      height: 51vh; 
+      background: linear-gradient(to right, #181341, #403a81, #555593);
+      border: 0.2vw solid rgb(255, 255, 255);
+      color: white;
+      font-size: 0.9vw;
+      border-radius: 1vw;
+      flex-direction: column;
+      padding: 2vw;
+      left: 80.5vw;
+      top: 38vh;
+      display: none;
+      text-align: left;
+      gap:0vw;
+    }
