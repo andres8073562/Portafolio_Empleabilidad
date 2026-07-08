@@ -1,103 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> <link rel="stylesheet" href="./Style/style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrés · Portafolio Player One</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./Style/style.css">
 </head>
 <body>
-  <nav>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#sobre">Sobre mí</a>
-    <a href="#habilidades">Habilidades</a>
-    <a href="#formacion">Formación</a>
-    <a href="#contacto">Contacto</a>
+
+  <!-- BOOT SCREEN -->
+  <div id="boot-screen" class="boot-screen" aria-hidden="true">
+    <div class="boot-box">
+      <p class="boot-logo">A&nbsp;·&nbsp;D&nbsp;·&nbsp;V</p>
+      <p class="boot-text" id="boot-text">CARGANDO PORTAFOLIO</p>
+      <div class="boot-bar"><span id="boot-fill"></span></div>
+      <p class="boot-hint">PRESS START</p>
+    </div>
+  </div>
+
+  <!-- SCANLINE / CRT OVERLAY -->
+  <div class="crt-overlay" id="crtOverlay" aria-hidden="true"></div>
+
+  <nav id="mainNav">
+    <div class="nav-brand">AV<span>_</span></div>
+    <button id="navToggle" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="#sobre" class="nav-link">Sobre mí</a>
+      <a href="#habilidades" class="nav-link">Habilidades</a>
+      <a href="#formacion" class="nav-link">Formación</a>
+      <a href="#proyectos" class="nav-link">Proyectos</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
+    </div>
+    <button id="crtToggle" class="crt-toggle" title="Activar/desactivar efecto CRT">CRT: ON</button>
   </nav>
 
-  <header>
+  <header id="sobre">
+    <div class="container hero">
+      <p class="player-tag">JUGADOR 1 · NIVEL JUNIOR</p>
+      <h1 class="titulo-principal" id="typedTitle"></h1>
 
-    <div class="container">
-    <h1 class="titulo-principal">Creando experiencias digitales increíbles</h1>
-
-  
-    </div>
-    <div class="redes">
-      
-      
-    </div>
-    <div id="cuadro1" class="cuadro1" onclick="mostrarCuadro()">
-      <h3>Quien soy</h3>
-      <p>
-        Soy un programador junior motivado, con interés en crecer en el desarrollo de software. Me destaco por mi responsabilidad, compromiso y disposición para trabajar
-         en equipo. Busco mejorar constantemente mis habilidades y aportar valor en entornos colaborativos.</p>
-      <h3>Mis aspiraciones</h3>  
-      <p>Estoy orientado al logro y comprometido con mis metas. A futuro, planeo fundar dos empresas: una dedicada a perfumes y relojes con enfoque en estilo e innovación, y otra en el sector agropecuario,
-         centrada en ganadería y desarrollo sostenible.</p>  
-  
+      <div class="hud-panel" id="cuadro1">
+        <p class="hud-eyebrow">// PERFIL</p>
+        <h3><span class="hud-icon">▸</span> Quién soy</h3>
+        <p>
+          Soy un programador junior motivado, con interés en crecer en el desarrollo de software. Me destaco por mi responsabilidad, compromiso y disposición para trabajar
+          en equipo. Busco mejorar constantemente mis habilidades y aportar valor en entornos colaborativos.
+        </p>
+        <h3><span class="hud-icon">▸</span> Mis aspiraciones</h3>
+        <p>
+          Estoy orientado al logro y comprometido con mis metas. A futuro, planeo fundar dos empresas: una dedicada a perfumes y relojes con enfoque en estilo e innovación, y otra en el sector agropecuario,
+          centrada en ganadería y desarrollo sostenible.
+        </p>
+      </div>
+      <a href="#habilidades" class="scroll-cue" aria-label="Ir a habilidades">▼</a>
     </div>
   </header>
-  <div class="container_principal">
-    
-    <div class="container2" id="container2" onclick="mostrarCuadro()">
-      <h2>Perfil</h2>
-      <p></p>
-    </div>
-    <div class="cuadro2" id="cuadro2" onclick="mostrarCuadro1()">
-      <h2>Habilidades Técnicas</h2>
-      <ul>
-        <li>Python, JavaScript, C++, Java</li>
-        <li>HTML, Git, MySQL, MongoDB</li>
-      </ul>
-  
-      <h2>Competencias Blandas</h2>
-      <ul>
-        <li>Liderazgo, Creatividad, Resiliencia, Disciplina</li>
-      </ul>
-    </div>
 
+  <main class="container_principal">
 
-    <div class="container3" onclick="mostrarCuadro1()">
-    <h2>Habilidades Técnicas</h2>
-    </div>
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="reveal">
+      <p class="section-eyebrow">// INVENTARIO</p>
+      <h2>Habilidades</h2>
 
-  <div class="columna"></div>
+      <div class="skills-grid">
+        <div class="skill-block">
+          <h3>Habilidades Técnicas</h3>
+          <ul class="badge-list">
+            <li class="badge">Python</li>
+            <li class="badge">JavaScript</li>
+            <li class="badge">C++</li>
+            <li class="badge">Java</li>
+            <li class="badge">HTML</li>
+            <li class="badge">Git</li>
+            <li class="badge">MySQL</li>
+            <li class="badge">MongoDB</li>
+          </ul>
+        </div>
+        <div class="skill-block">
+          <h3>Competencias Blandas</h3>
+          <ul class="badge-list">
+            <li class="badge badge-alt">Liderazgo</li>
+            <li class="badge badge-alt">Creatividad</li>
+            <li class="badge badge-alt">Resiliencia</li>
+            <li class="badge badge-alt">Disciplina</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <div class="cuadro3" id="cuadro3" onclick="mostrarCuadro2()">
-      <li><strong>Técnico en Programación</strong> - CampusLands (Ene - Sep 2025)</li>
-      <li><strong>Técnico en Sistemas</strong> - Sena, Floridablanca (Feb - Nov 2024)</li>
-      <li><strong>Bachiller</strong> - Colegio Rafael Pombo (2024)</li>
-    </div>
-    <div class="container4" onclick="mostrarCuadro2()">
-    <h2>Formación</h2>
+    <!-- FORMACION -->
+    <section id="formacion" class="reveal">
+      <p class="section-eyebrow">// PROGRESO</p>
+      <h2>Formación</h2>
 
-  </div>
+      <ol class="quest-log">
+        <li class="quest reveal">
+          <span class="quest-level">LVL 01</span>
+          <div class="quest-body">
+            <h3>Bachiller</h3>
+            <p class="quest-meta">Colegio Rafael Pombo · 2024</p>
+          </div>
+        </li>
+        <li class="quest reveal">
+          <span class="quest-level">LVL 02</span>
+          <div class="quest-body">
+            <h3>Técnico en Sistemas</h3>
+            <p class="quest-meta">Sena, Floridablanca · Feb – Nov 2024</p>
+          </div>
+        </li>
+        <li class="quest quest-current reveal">
+          <span class="quest-level">LVL 03</span>
+          <div class="quest-body">
+            <h3>Técnico en Programación</h3>
+            <p class="quest-meta">CampusLands · Ene – Sep 2025</p>
+          </div>
+        </li>
+      </ol>
+    </section>
 
-    <div id="cuadro4" class="cuadro4 " onclick="mostrarCuadro3()">
-    </div>
-    <div class="container5" onclick="mostrarCuadro3()">
-    <h2>Experiencia / Proyectos</h2>
-    <h3>Kario Media </h3>
-    <p>Desarrollo de un pagina la cual solo contiene hatml y css, donde se podra ver todas las vistas de la pagina pero no dispondra para interactuar.</p>
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="reveal">
+      <p class="section-eyebrow">// MISIONES</p>
+      <h2>Experiencia / Proyectos</h2>
 
-    <h3>Proyecto de F1</h3>
-    <p>Desarrollo de una aplicación Full Stack tipo enciclopedia interactiva de Fórmula 1, que permite a los usuarios explorar y filtrar información sobre carros, pilotos y circuitos, acceder a detalles completos de cada elemento, y realizar operaciones CRUD sobre los datos.</p>
-   </div>
+      <div class="projects-grid">
+        <article class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-tag">MISIÓN 01</span>
+          </div>
+          <h3>Kario Media</h3>
+          <p>Desarrollo de un pagina la cual solo contiene hatml y css, donde se podra ver todas las vistas de la pagina pero no dispondra para interactuar.</p>
+        </article>
 
-    <div class="cuadro5" id="cuadro5" onclick="mostrarCuadro4()"></div>
+        <article class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-tag">MISIÓN 02</span>
+          </div>
+          <h3>Proyecto de F1</h3>
+          <p>Desarrollo de una aplicación Full Stack tipo enciclopedia interactiva de Fórmula 1, que permite a los usuarios explorar y filtrar información sobre carros, pilotos y circuitos, acceder a detalles completos de cada elemento, y realizar operaciones CRUD sobre los datos.</p>
+        </article>
+      </div>
+    </section>
 
-    <div class="container6" onclick="mostrarCuadr4()">
-    <h2>Contacto</h2>
-    <ul>
-      <li><strong>LinkedIn:</strong> <a href="https://github.com/andres8073562">GitHub</a></li>
-      <li><strong>GitHub:</strong> <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit">LinkedIn</a></li>
-      
-    </ul>
+    <!-- CONTACTO -->
+    <section id="contacto" class="reveal">
+      <p class="section-eyebrow">// CONTINUAR</p>
+      <h2>Contacto</h2>
 
-    <h2>Idiomas</h2>
-    <p>Inglés - A3</p>
-    </div>
-  </div>
+      <div class="contact-grid">
+        <ul class="contact-list">
+          <li>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/andres8073562" target="_blank" rel="noopener">github.com/andres8073562</a>
+            <button class="copy-btn" data-copy="https://github.com/andres8073562" aria-label="Copiar enlace de GitHub">Copiar</button>
+          </li>
+          <li>
+            <strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank" rel="noopener">LinkedIn</a>
+            <button class="copy-btn" data-copy="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" aria-label="Copiar enlace de LinkedIn">Copiar</button>
+          </li>
+        </ul>
+
+        <div class="lang-panel">
+          <h3>Idiomas</h3>
+          <p>Inglés - A3</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="visit-counter">VISITAS: <span id="visitCount">000000</span></p>
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑ RESPAWN</button>
+    <p class="footer-note">hecho con &lt;code/&gt; · <span id="footerYear"></span></p>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="./Scripts/funciones.js"></script>
 </body>
-<script src="./Scripts/funciones.js"></script>
 </html>
